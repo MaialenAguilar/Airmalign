@@ -35,3 +35,5 @@ while True:
     myServo.value=value2
     print("Servo value set to "+str(value2))
     sleep(1)
+
+
