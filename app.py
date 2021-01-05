@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    templateData = {'sensorTemp ' : 24,'sensorHum ' : humedad}  
+    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad}  
     return render_template('index.html',**templateData)
     
 # Configuracion basica

@@ -34,7 +34,7 @@ def on_message(client, userdata, msg):
     hum=mensaje_recibido_json["humi"]
     print(hum)
 
-    f=open("DatosFlask.py","w")
+    f=open("app.py","w")
     f.write("Temperatura=" + str(temp) + "\nHumedad=" + str(hum))
     time.sleep(10)
     f.close()
