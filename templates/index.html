@@ -6,8 +6,14 @@
 
 <body>
     <h1>AIRMALIGN</h1>
-    <h2> Sensor de Temperatura y Humedad </h2>
+    <fieldset id="primer_fieldset_P1">
+    <legend><h2> Sensor de Temperatura y Humedad </h2></legend>
     <h3> Temperatura =>  {{ sensorTemp  }}</h3>
-    <h3> Humedad =>  {{ sensorHum  }}</h3>		
+    <h3> Humedad =>  {{ sensorHum  }}</h3>	
+    </fieldset>   
+    <fieldset id="segundo_fieldset_P2">
+    <legend><h2> Estados: </h2></legend>	
+    <h3> Caldera =>  {{ sensorServo  }}</h3>
+    </fieldset>
 </body>
 </html>

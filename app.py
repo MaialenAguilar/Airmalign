@@ -2,7 +2,7 @@ from flask import Flask,render_template
 
 temperatura=22
 humedad=27
-
+caldera="Encendida"
 
 # Inicializamos la aplicacion
 app = Flask(__name__)
@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad}  
+    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad,'sensorServo' : caldera }  
     return render_template('index.html',**templateData)
     
 # Configuracion basica

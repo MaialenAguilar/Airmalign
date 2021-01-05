@@ -33,9 +33,13 @@ def on_message(client, userdata, msg):
 
     hum=mensaje_recibido_json["humi"]
     print(hum)
-
+  
+    servo=mensaje_recibido_json["valor_servo"]
+    print(servo)
+  
+	
     f=open("app.py","w")
-    f.write("Temperatura=" + str(temp) + "\nHumedad=" + str(hum))
+    f.write("temperatura=" + str(temp) + "\nhumedad=" + str(hum) + "\ncaldera=" + str(servo))
     time.sleep(10)
     f.close()
 

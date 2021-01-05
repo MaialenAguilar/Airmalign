@@ -1,16 +1,6 @@
-body {
-	background: black;
+body{
+	background-color: #717989;
 	color: white;
 }
 
-.button {
-  font: bold 15px Arial;
-  text-decoration: none;
-  background-color: #EEEEEE;
-  color: #333333;
-  padding: 2px 6px 2px 6px;
-  border-top: 2px solid #CCCCCC;
-  border-right: 2px solid #333333;
-  border-bottom: 2px solid #333333;
-  border-left: 2px solid #CCCCCC;
-}
+
