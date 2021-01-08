@@ -1,20 +1,35 @@
+temperatura=23
+humedad=51
 from flask import Flask,render_template
-
-temperatura=22
-humedad=27
-caldera="Encendida"
-
-# Inicializamos la aplicacion
+gas=216
 app = Flask(__name__)
- 
-# Ruta principal 
-
-@app.route("/")
+@app.route('/')
 def index():
-    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad,'sensorServo' : caldera }  
+    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad,'sensorGas' : gas }
     return render_template('index.html',**templateData)
-    
-# Configuracion basica
-if __name__ == '__main__':
-    # Activamos debug y configuramos para que sea accesible desde cualquier dispositivo
-    app.run(debug=True, host='0.0.0.0')
+if __name__ =='__main__':
+      app.run(debug=True, host='0.0.0.0')
+gas=215
+app = Flask(__name__)
+@app.route('/')
+def index():
+    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad,'sensorGas' : gas }
+    return render_template('index.html',**templateData)
+if __name__ =='__main__':
+      app.run(debug=True, host='0.0.0.0')
+gas=215
+app = Flask(__name__)
+@app.route('/')
+def index():
+    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad,'sensorGas' : gas }
+    return render_template('index.html',**templateData)
+if __name__ =='__main__':
+      app.run(debug=True, host='0.0.0.0')
+gas=216
+app = Flask(__name__)
+@app.route('/')
+def index():
+    templateData = {'sensorTemp' : temperatura,'sensorHum' : humedad,'sensorGas' : gas }
+    return render_template('index.html',**templateData)
+if __name__ =='__main__':
+      app.run(debug=True, host='0.0.0.0')

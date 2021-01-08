@@ -10,7 +10,7 @@ from datetime import datetime
 import time
 import os
 
-topic = "deustoLab/Temperatura"
+topic = "deustoLab/gas"
 
 # Callback que se llama cuando el cliente recibe el CONNACK del servidor 
 #Restult code 0 significa conexion sin errores
@@ -30,16 +30,13 @@ def on_message(client, userdata, msg):
 
     #the message received starts with 'b, that mean bytes. 
     mensaje_recibido_json =json.loads(msg.payload )
-   
-    temp=mensaje_recibido_json["temp"]
-    print(temp)
-
-    hum=mensaje_recibido_json["humi"]
-    print(hum)
+     
+    gas=mensaje_recibido_json["gas"]
+    print(gas)
   
-  	
-    f=open("app.py","w")
-    f.write("temperatura=" + str(temp) + "\nhumedad=" + str(hum) +"\nfrom flask import Flask,render_template")
+	
+    f=open("app.py","a")
+    f.write("\ngas=" + str(gas) + "\napp = Flask(__name__)" +"\n@app.route(" + "'/'" + ")"+ "\ndef index():" + "\n    templateData = {" +"'sensorTemp'" + " : temperatura,"+ "'sensorHum'" + " : humedad," +"'sensorGas'" + " : gas }" + "\n    return render_template("+ "'index.html'"+ ",**templateData)" + "\nif __name__ ==" +  "'__main__'"+ ":" + "\n      app.run(debug=True, host=" +"'0.0.0.0'"+ ")")
     time.sleep(2)
     f.close()
 
